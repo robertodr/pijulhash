@@ -1,0 +1,34 @@
+name:        pijulhash
+version:     0.1.0.0
+synopsis:    Compile Pijul revision info into Haskell projects
+description: Please see the README
+category:    Development
+author:      Roberto Di Remigio
+maintainer:  roberto.diremigio@gmail.com
+license:     BSD3
+github:      robertodr/pijulhash
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+dependencies:
+- base >= 4.9.1 && < 5
+- bytestring
+- directory
+- filepath
+- template-haskell
+- process
+
+library:
+  source-dirs: src
+
+tests:
+  githash-spec:
+    source-dirs: test
+    main:        Spec.hs
+    dependencies:
+    - pijulhash
+    - hspec
+    - temporary
+    - unliftio

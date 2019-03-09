@@ -24,7 +24,7 @@ library:
   source-dirs: src
 
 tests:
-  githash-spec:
+  pijulhash-spec:
     source-dirs: test
     main:        Spec.hs
     dependencies:
